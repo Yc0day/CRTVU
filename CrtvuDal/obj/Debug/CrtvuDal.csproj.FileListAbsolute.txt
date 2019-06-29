@@ -1,0 +1,20 @@
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\CrtvuDal\bin\Debug\CrtvuDal.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\CrtvuDal\bin\Debug\CrtvuDal.pdb
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\CrtvuDal\bin\Debug\Newtonsoft.Json.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\CrtvuDal\bin\Debug\StackExchange.Redis.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\CrtvuDal\bin\Debug\Newtonsoft.Json.xml
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\CrtvuDal\bin\Debug\StackExchange.Redis.xml
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\CrtvuDal\obj\Debug\CrtvuDal.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\CrtvuDal\obj\Debug\CrtvuDal.pdb
+C:\Users\admin\documents\visual studio 2015\Projects\CRTVU\CrtvuDal\bin\Debug\CrtvuDal.dll.config
+C:\Users\admin\documents\visual studio 2015\Projects\CRTVU\CrtvuDal\obj\Debug\CrtvuDal.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\CRTVU\CrtvuDal\bin\Debug\CrtvuDal.dll.config
+C:\Users\admin\Desktop\CRTVU\CrtvuDal\bin\Debug\CrtvuDal.dll
+C:\Users\admin\Desktop\CRTVU\CrtvuDal\bin\Debug\CrtvuDal.pdb
+C:\Users\admin\Desktop\CRTVU\CrtvuDal\bin\Debug\Newtonsoft.Json.dll
+C:\Users\admin\Desktop\CRTVU\CrtvuDal\bin\Debug\StackExchange.Redis.dll
+C:\Users\admin\Desktop\CRTVU\CrtvuDal\bin\Debug\Newtonsoft.Json.xml
+C:\Users\admin\Desktop\CRTVU\CrtvuDal\bin\Debug\StackExchange.Redis.xml
+C:\Users\admin\Desktop\CRTVU\CrtvuDal\obj\Debug\CrtvuDal.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\CRTVU\CrtvuDal\obj\Debug\CrtvuDal.dll
+C:\Users\admin\Desktop\CRTVU\CrtvuDal\obj\Debug\CrtvuDal.pdb

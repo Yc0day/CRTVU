@@ -1,0 +1,77 @@
+﻿@model Crtvu.Dal.tb_student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>info</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+</head>
+<body>
+    <div>
+
+        <table class="table table-striped">
+            <tr>
+                <td>学号</td>
+                <td>@Html.TextBoxFor(a => a.id, new { Readonly = "readonly" })</td>
+            </tr>
+            <tr>
+                <td>姓名：</td>
+                <td>@Html.TextBoxFor(a => a.name, new { Readonly = "readonly" })</td>
+            </tr>
+            <tr>
+                <td>籍贯：</td>
+                <td>@Html.TextBoxFor(a => a.nplace, new { Readonly = "readonly" })</td>
+            </tr>
+            <tr>
+                <td>身份证号：</td>
+                <td>@Html.TextBoxFor(a => a.id_card, new { Readonly = "readonly" })</td>
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td>@Html.TextBoxFor(a => a.sex, new { Readonly = "readonly" })</td>
+            <tr>
+                <td>联系方式：</td>
+                <td>@Html.TextBoxFor(a => a.phone, new { Readonly = "readonly" })</td>
+            </tr>
+            <tr>
+                <td>学历：</td>
+                <td>@Html.TextBoxFor(a => a.education, new { Readonly = "readonly" })</td>
+            </tr>
+            <tr>
+                <td>班级：</td>
+                <td>@Html.TextBoxFor(a => a.stu_class, new { Readonly = "readonly" })</td>
+            </tr>
+            <tr>
+                <td>系号：</td>
+                <td>@Html.TextBoxFor(a => a.bid, new { Readonly = "readonly" })</td>
+            </tr>
+            <tr>
+                <td>照片：</td>
+                <td>@Html.TextBoxFor(a => a.image, new { Readonly = "readonly" })</td>
+            </tr>
+            <tr>
+                <td>系名称：</td>
+                <td>@Html.TextBoxFor(a => a.bname, new { Readonly = "readonly" })</td>
+            </tr>
+            <tr>
+                <td>其他：</td>
+                <td>@Html.TextBoxFor(a => a.othertwo, new { Readonly = "readonly" })</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <a href="@Url.Action("ModifyInfo","StudentD",new { stuid=ViewBag.id} )" target="iframe_a">修改</a>
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+</body>
+</html>
+

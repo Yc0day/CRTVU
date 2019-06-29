@@ -1,0 +1,10 @@
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\View_model\bin\Debug\View_model.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\View_model\bin\Debug\View_model.pdb
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\View_model\obj\Debug\View_model.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\View_model\obj\Debug\View_model.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\View_model\obj\Debug\View_model.pdb
+C:\Users\admin\Desktop\CRTVU\View_model\bin\Debug\View_model.dll
+C:\Users\admin\Desktop\CRTVU\View_model\bin\Debug\View_model.pdb
+C:\Users\admin\Desktop\CRTVU\View_model\obj\Debug\View_model.dll
+C:\Users\admin\Desktop\CRTVU\View_model\obj\Debug\View_model.pdb
+C:\Users\admin\Desktop\CRTVU\View_model\obj\Debug\View_model.csprojResolveAssemblyReference.cache

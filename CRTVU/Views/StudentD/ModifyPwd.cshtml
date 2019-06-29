@@ -1,0 +1,72 @@
+﻿@model Crtvu.Dal.tb_student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ModifyPwd</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("ModifyPwd", "StudentD", FormMethod.Post))
+        {
+            <table class="table table-bordered" style="height:200px; width:100%; margin-top:10px;">
+                <tr>
+                    <td class="col-sm-2" style="background-color:#3FA9D0;">
+                        <div class="table-form-label" style="padding-top: 10px" align="center">
+                            <label for="stuid" class="control-label">学号</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-sm-5">
+                            @Html.TextBox("stuid")
+                            @*<input type="password" class="form-control" id="new_pwd" name="new_pwd" />*@
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-sm-2" style="background-color:#3FA9D0;">
+                        <div class="table-form-label" style="padding-top: 10px" align="center">
+                            <label for="new_pwd" class="control-label">新密码</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-sm-5">
+                            @Html.Password("pwd")
+                            @*<input type="password" class="form-control" id="new_pwd" name="new_pwd" />*@
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-sm-2" style="background-color:#3FA9D0;">
+                        <div class="table-form-label" style="padding-top: 10px" align="center">
+                            <label for="confirm_pwd" class="control-label">确认密码</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-sm-5">
+                            @Html.Password("rePwd")
+                            @*<input type="password" id="confirm_pwd" name="confirm_pwd" class="form-control" />*@
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="col-sm-5 col-md-offset-2">
+                            <input type="submit" value="确定修改" class="btn btn-success fa fa-check" style="background-color:#3FA9D0" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        }
+
+    </div>
+</body>
+</html>
+

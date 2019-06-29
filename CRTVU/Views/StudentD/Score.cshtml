@@ -1,0 +1,54 @@
+﻿@model List<Crtvu.Dal.tb_sc>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Score</title>
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css" />
+    <style type="text/css">
+        .c {
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="c">
+        @*@using (Html.BeginForm("Score", "Home", FormMethod.Post))
+            {
+                <table>
+                    <tr>
+                        <td>学年</td>
+                        <td>@Html.DropDownListFor()</td>
+                        <td>学期</td>
+                        <td>@Html.DropDownListFor()</td>
+                    </tr>
+                </table>
+            }*@
+
+        <table class="table table-bordered table-hover" style="margin:auto;">
+            <tr>
+                <th>选课id</th>
+                <th>课程名字</th>
+                <th>课程学分</th>
+                <th>成绩</th>
+            </tr>
+            @foreach (var score in Model)
+            {
+                <tr>
+                    <td>@score.id</td>
+                    <td>@score.tb_course.name</td>
+                    <td>@score.tb_course.credit</td>
+                    <td>@score.grade</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
+

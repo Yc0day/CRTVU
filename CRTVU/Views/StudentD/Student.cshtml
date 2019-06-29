@@ -1,0 +1,93 @@
+﻿@model List<Crtvu.Dal.tb_student>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Student</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <style type="text/css">
+        #grad1 {
+            height: 200px;
+            background: -webkit-linear-gradient(left, #fff, green); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(right, #fff, #green); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(right, #fff, #green); /* Firefox 3.6 - 15 */
+            background: linear-gradient(to right, #fff, #green); /* 标准的语法（必须放在最后） */
+        }
+        .header {
+            padding: 10px;
+        }
+            .header table {
+                position: relative;
+                right: 15px;
+                float: right;
+                /*filter:alpha(Opacity=100);*/
+            }
+            .header tr td {
+                padding: 0px 8px;
+                border-right: 1px solid #ccc;
+            }
+        .iframe {
+            position: relative;
+            padding: 0px 20px 10px 20px;
+        }
+    </style>
+    <script src="~/js/jquery1.11.3.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div style="border: 5px solid #808080;height:100%;">
+        <div id="grad1" style="height:80px;" class="header">
+            <img src="~/images/logo_school.png" style="margin-left:10px;" />
+            <table>
+                <tr>
+                    <td>欢迎您:@ViewBag.id</td>
+                    <td>退出</td>
+                </tr>
+            </table>
+        </div>
+        <div style="padding-left:20px;">
+            <ul class="nav nav-tabs" style="background-color: powderblue;">
+                <li class="active"><a href="@Url.Action("Student","StudentD")">返回首页</a></li>
+                <li><a href="@Url.Action("Elective", "StudentD")" target="iframe_a">网上选课</a></li>
+                <li><a href="#">考试报名</a></li>
+                <li><a href="#">教学质量评价</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        信息维护 <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Url.Action("info","StudentD",new { stuid=ViewBag.id} )" target="iframe_a">个人信息</a></li>
+                        <li class="divider"></li>
+                        <li><a href="@Url.Action("ModifyPwd","StudentD",new {stuId=ViewBag.id})" target="iframe_a">密码修改</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        信息查询 <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Url.Action("Schedule","StudentD",new {stuId=ViewBag.id })" target="iframe_a">学生个人课表</a></li>
+                        <li class="divider"></li>
+                        <li><a href="@Url.Action("Score","StudentD",new {stuId=ViewBag.id })" target="iframe_a">个人成绩查询</a></li>
+                        @*<li class="divider"></li>
+                            <li><a href="@Url.Action("Situation","Home",new {stuId=ViewBag.id })" target="iframe_a">选课情况查询</a></li>*@
+                    </ul>
+                </li>
+                <li><a href="#">公用信息查询</a></li>
+            </ul>
+        </div>
+        <div>
+            <img src="~/images/home.png" style="width:30px;height:30px;margin:5px 10px 5px 35px;" /><label style="position:relative;top:2px;">当前位置--</label>
+        </div>
+        <div class="iframe">
+            <iframe src="" style="width:100%; height:380px;" frameborder="1" name="iframe_a"></iframe>
+        </div>
+    </div>
+</body>
+</html>

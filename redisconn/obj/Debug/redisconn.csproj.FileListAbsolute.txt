@@ -1,0 +1,14 @@
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\redisconn\bin\Debug\redisconn.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\redisconn\bin\Debug\redisconn.pdb
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\redisconn\bin\Debug\StackExchange.Redis.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\redisconn\bin\Debug\StackExchange.Redis.xml
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\redisconn\obj\Debug\redisconn.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\CRTVU\redisconn\obj\Debug\redisconn.pdb
+C:\Users\admin\documents\visual studio 2015\Projects\CRTVU\redisconn\obj\Debug\redisconn.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\CRTVU\redisconn\bin\Debug\redisconn.dll
+C:\Users\admin\Desktop\CRTVU\redisconn\bin\Debug\redisconn.pdb
+C:\Users\admin\Desktop\CRTVU\redisconn\bin\Debug\StackExchange.Redis.dll
+C:\Users\admin\Desktop\CRTVU\redisconn\bin\Debug\StackExchange.Redis.xml
+C:\Users\admin\Desktop\CRTVU\redisconn\obj\Debug\redisconn.dll
+C:\Users\admin\Desktop\CRTVU\redisconn\obj\Debug\redisconn.pdb
+C:\Users\admin\Desktop\CRTVU\redisconn\obj\Debug\redisconn.csprojResolveAssemblyReference.cache

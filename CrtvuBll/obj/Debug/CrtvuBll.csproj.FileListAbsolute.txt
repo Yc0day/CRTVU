@@ -1,0 +1,14 @@
+C:\Users\admin\documents\visual studio 2015\Projects\CRTVU\CrtvuBll\bin\Debug\CrtvuBll.dll
+C:\Users\admin\documents\visual studio 2015\Projects\CRTVU\CrtvuBll\bin\Debug\CrtvuBll.pdb
+C:\Users\admin\documents\visual studio 2015\Projects\CRTVU\CrtvuBll\bin\Debug\CrtvuDal.dll
+C:\Users\admin\documents\visual studio 2015\Projects\CRTVU\CrtvuBll\bin\Debug\CrtvuDal.pdb
+C:\Users\admin\documents\visual studio 2015\Projects\CRTVU\CrtvuBll\obj\Debug\CrtvuBll.csprojResolveAssemblyReference.cache
+C:\Users\admin\documents\visual studio 2015\Projects\CRTVU\CrtvuBll\obj\Debug\CrtvuBll.dll
+C:\Users\admin\documents\visual studio 2015\Projects\CRTVU\CrtvuBll\obj\Debug\CrtvuBll.pdb
+C:\Users\admin\Desktop\CRTVU\CrtvuBll\bin\Debug\CrtvuBll.dll
+C:\Users\admin\Desktop\CRTVU\CrtvuBll\bin\Debug\CrtvuBll.pdb
+C:\Users\admin\Desktop\CRTVU\CrtvuBll\bin\Debug\CrtvuDal.dll
+C:\Users\admin\Desktop\CRTVU\CrtvuBll\bin\Debug\CrtvuDal.pdb
+C:\Users\admin\Desktop\CRTVU\CrtvuBll\obj\Debug\CrtvuBll.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\CRTVU\CrtvuBll\obj\Debug\CrtvuBll.dll
+C:\Users\admin\Desktop\CRTVU\CrtvuBll\obj\Debug\CrtvuBll.pdb

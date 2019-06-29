@@ -1,0 +1,244 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>form</title>
+    <script>
+	    function popBox()
+	    {
+	        var popBox = document.getElementById("mask"); 
+	        popBox.style.display = "block";
+	        document.getElementById("name1").value = document.getElementById("name").innerHTML;
+	        document.getElementById("nplace1").value = document.getElementById("nplace").innerHTML;
+	        document.getElementById("phone1").value = document.getElementById("phone").innerHTML;
+	    };
+	    function closeBox()
+	    {
+	      var popBox = document.getElementById("mask");
+	      popBox.style.display = "none";
+	    }
+	    function update()
+	    {
+	        var employees = { "name": document.getElementById("name1").value, "nplace": document.getElementById("nplace1").value, "phone": document.getElementById("phone1").value };
+	      var a = JSON.stringify(employees);
+	      var xmlhttp;
+		  if (window.XMLHttpRequest)
+		  {
+		     xmlhttp=new XMLHttpRequest();
+		  }
+		  else
+		  {
+		    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		  xmlhttp.onreadystatechange=function()
+		  {
+		    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		    {
+		        var injson = xmlhttp.responseText;
+		        if (injson == "True") {
+		            document.getElementById("name").innerHTML = document.getElementById("name1").value;
+		            document.getElementById("nplace").innerHTML = document.getElementById("nplace1").value;
+		            document.getElementById("phone").innerHTML = document.getElementById("phone1").value;
+		            alert(injson);
+		        } else { alert(injson)}
+		        document.getElementById("mask").style.display = "none";
+		    }
+		  }
+		  xmlhttp.open("POST","/Data/Self1",true);
+		  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		  xmlhttp.send("inform="+a);
+	    }
+    </script>
+    <style type="text/css">
+        #table table {
+            width: 100%;
+            font-size: 14px;
+            border: 1px solid #eee;
+        }
+
+        #table {
+            padding: 0 10px;
+        }
+
+        table thead th {
+            background: #f5f5f5;
+            padding: 10px;
+            text-align: left;
+        }
+        table tbody td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            border-right: 1px solid #eee;
+        }
+            table tbody td span {
+                margin: 0 10px;
+                cursor: pointer;
+            }
+        .delete {
+            color: red;
+        }
+
+        .edit {
+            color: #008cd5;
+        }
+
+        .add {
+            border: 1px solid #eee;
+            margin: 10px 0;
+            padding: 15px;
+        }
+
+        input {
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 3px;
+            margin-right: 15px;
+        }
+
+        button {
+            background: #008cd5;
+            border: 0;
+            padding: 4px 15px;
+            border-radius: 3px;
+            color: #fff;
+        }
+        #mask {
+            display: none;
+            background: rgba(0, 0, 0, .5);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 4;
+            top: 0;
+            left: 0;
+        }
+        .mask {
+            width: 300px;
+            height: 250px;
+            background: rgba(255, 255, 255, 1);
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 47;
+            border-radius: 5px;
+        }
+        .title {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+            .title span {
+                float: right;
+                cursor: pointer;
+            }
+        .content {
+            padding: 10px;
+        }
+            .content input {
+                width: 270px;
+                margin-bottom: 15px;
+            }
+    </style>
+</head>
+<body>
+    <div id="table">
+        <table cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>个人信息</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="5%">教师编号:</td>
+                    <td id="id"></td>
+                    <td width="10%">姓名</td>
+                    <td id="name" width="15%"></td>
+                    <td rowspan="2" width="10%">照片</td>
+                    <td rowspan="2"><img style="width:120px;height:120px" id="image" src=""/></td>
+                </tr>
+                <tr>
+                    <td width="5%">籍贯:</td>
+                    <td id="nplace"></td>
+                    <td width="10%">性别:</td>
+                    <td id="sex" width="15%"></td>
+                </tr>
+                <tr>
+                    <td width="5%">学历:</td>
+                    <td id="education"></td>
+                    <td width="10%">身份证:</td>
+                    <td id="id_card" width="15%"></td>
+                    <td width="10%">职位</td>
+                    <td id="position"></td>
+                </tr>
+                <tr>
+                    <td width="5%">学院名称:</td>
+                    <td id="bname"></td>
+                    <td width="10%">手机号:</td>
+                    <td id="phone" width="15%"></td>
+                </tr>
+                <tr><td><span class="edit" onclick="popBox()">编辑</span></td></tr>
+            </tbody>
+        </table>
+        <script>
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    var injson = JSON.parse(xmlhttp.responseText);
+                    document.getElementById("id").innerText = injson.id;
+                    document.getElementById("name").innerText = injson.name;
+                    document.getElementById("nplace").innerText = injson.nplace;
+                    document.getElementById("sex").innerText = injson.sex;
+                    document.getElementById("phone").innerText = injson.phone;
+                    document.getElementById("education").innerText = injson.education;
+                    document.getElementById("id_card").innerText = injson.id_card;
+                    document.getElementById("position").innerText = injson.position;
+                    document.getElementById("bname").innerText = injson.bname;
+                    document.getElementById("image").src = injson.image;
+                }
+            }
+            xmlhttp.open("POST", "/Data/Self", false);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send("inform=Self");
+        </script>
+        <div id="mask" v-if="editlist">
+            <div class="mask">
+                <div class="title">
+                    编辑
+                    <span onclick="closeBox()">
+                        X
+                    </span>
+                </div>
+                <div class="content">
+                    <input type="text"  id="name1" value="" placeholder="姓名" />
+                    <input type="text"  id="nplace1" value="" placeholder="籍贯" />
+                    <input type="text" id="phone1" value=""  placeholder="手机号" />
+                    <button onclick="update()">更新</button>
+                    <button onclick="closeBox()">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

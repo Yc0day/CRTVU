@@ -1,0 +1,114 @@
+﻿@model List<Crtvu.Dal.tb_course>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Elective</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <script src="~/js/jquery1.11.3.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <style>
+        #grad1 {
+            height: 120px;
+            /*background: -webkit-linear-gradient(#0812a1, #93cde9); /* Safari 5.1 - 6.0 */
+            /*background: -o-linear-gradient(#0812a1, #93cde9); /* Opera 11.1 - 12.0 */
+            /*background: -moz-linear-gradient(#0812a1, #93cde9); /* Firefox 3.6 - 15 */
+            background: linear-gradient(#0812a1, #93cde9); /* 标准的语法（必须放在最后） */
+        }
+
+        .one {
+            margin: 10px;
+            /*width:100%;*/
+            padding: 20px 15px;
+            border-radius: 10px;
+        }
+
+            .one span {
+                margin-left: 15px;
+                color: #ffffff;
+            }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="one" id="grad1">
+            @using (Html.BeginForm("Elective", "StudentD", FormMethod.Post))
+            {
+                <div>
+                    <span>课程性质：</span><span style="color:#000000;">@Html.DropDownList("List", ViewBag.list as SelectList, " ")  </span>
+                    <span>有无余量：</span><span style="color:#000000;">@Html.DropDownList("List2", ViewBag.list2 as SelectList, " ")</span>
+                    <span>课程归属:</span><span style="color:#000000;">@Html.DropDownList("List3", ViewBag.list3 as SelectList, " ")</span>
+                    <span>上课校区:</span><span style="color:#000000;">@Html.DropDownList("List4", ViewBag.list4 as SelectList, " ")</span><br />
+                </div>
+                <div style="margin:10px 0px;">
+                    <span>上课时间：</span><span style="color:#000000;">@Html.DropDownList("List4", ViewBag.list4 as SelectList, " ")</span><br />
+                </div>
+                <div>
+                    <span>根据课程名称查询：</span><span style="color:#000;">@Html.TextBox("name")</span>
+                    <span><input type="submit" value="确定" class="btn btn-primary" /></span>
+                </div>
+            }
+        </div>
+        <div class="container" style="position:relative; top:10px;background-color:antiquewhite;">
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>课程ID</th>
+                    <th>课程名称</th>
+                    <th>课程学分</th>
+                    <th>教师ID</th>
+                    <th>教师名称</th>
+                    <th>OtherOne</th>
+                </tr>
+                @if (Model == null)
+                {
+                    return;
+                }
+
+                @foreach (Crtvu.Dal.tb_course course in Model)
+                {
+                    //+this{ASP._Page_Views_Home_Elective_cshtml}
+                    //ASP._Page_Views_Home_Elective_cshtml
+
+                    <tr>
+
+                        <td>@course.id</td>
+                        <td>@course.name</td>
+                        <td>@course.credit</td>
+                        <td>@course.tid</td>
+                        <td>@course.tname</td>
+                        <td>@course.otherone</td>
+                    </tr>
+                }
+            </table>
+            <div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="/Home/Elective?pageindex=@ViewBag.pager.Prev&name=@ViewBag.pager.condition["name"]" aria-label="Previous">
+                                <span aria-hidden="true">上一页</span>
+                            </a>
+                        </li>
+                        @for (int i = ViewBag.pager.LinkStart; i <= ViewBag.pager.LinkEnd; i++)
+                        {
+                            <li @((i == ViewBag.pager.PageIndex) ? Html.Raw("class='active'") : null)>@Html.ActionLink(i + "", "Elective", "Home", new { pageindex = i, name = ViewBag.pager.condition["name"] }, null)</li>
+                        }
+                        <li>
+                            <a href="/Home/Elective?pageindex=@ViewBag.pager.Next&name=@ViewBag.pager.condition["name"]" aria-label="Previous">
+                                <span aria-hidden="true">下一页</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
+

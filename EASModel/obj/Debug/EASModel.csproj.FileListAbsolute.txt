@@ -1,0 +1,17 @@
+C:\Users\admin\Desktop\CRTVU\EASModel\bin\Debug\EASModel.dll
+C:\Users\admin\Desktop\CRTVU\EASModel\bin\Debug\EASModel.pdb
+C:\Users\admin\Desktop\CRTVU\EASModel\bin\Debug\CrtvuBll.dll
+C:\Users\admin\Desktop\CRTVU\EASModel\bin\Debug\CrtvuDal.dll
+C:\Users\admin\Desktop\CRTVU\EASModel\bin\Debug\Md5Salt.dll
+C:\Users\admin\Desktop\CRTVU\EASModel\bin\Debug\redisconn.dll
+C:\Users\admin\Desktop\CRTVU\EASModel\bin\Debug\View_model.dll
+C:\Users\admin\Desktop\CRTVU\EASModel\bin\Debug\StackExchange.Redis.dll
+C:\Users\admin\Desktop\CRTVU\EASModel\bin\Debug\CrtvuBll.pdb
+C:\Users\admin\Desktop\CRTVU\EASModel\bin\Debug\CrtvuDal.pdb
+C:\Users\admin\Desktop\CRTVU\EASModel\bin\Debug\Md5Salt.pdb
+C:\Users\admin\Desktop\CRTVU\EASModel\bin\Debug\redisconn.pdb
+C:\Users\admin\Desktop\CRTVU\EASModel\bin\Debug\View_model.pdb
+C:\Users\admin\Desktop\CRTVU\EASModel\bin\Debug\StackExchange.Redis.xml
+C:\Users\admin\Desktop\CRTVU\EASModel\obj\Debug\EASModel.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\CRTVU\EASModel\obj\Debug\EASModel.dll
+C:\Users\admin\Desktop\CRTVU\EASModel\obj\Debug\EASModel.pdb

@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UPpass</title>
+</head>
+<body>
+    <div> 
+        请输入旧密码:<input id="oldpass" type="text"/><br />
+        请输入新密码:<input id="newpass" type="text" /><br />
+        <button type="button" onclick="tijiao()">确认提交</button>
+    </div>
+    <script>
+        function tijiao()
+        {
+            var oldpass= document.getElementById("oldpass").value;
+            var newpass= document.getElementById("newpass").value;
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    var injson = xmlhttp.responseText;
+                    if (injson == "True") {
+                        alert(injson);
+                    } else { alert(injson) }
+                    location.reload()
+                }
+            }
+            xmlhttp.open("POST", "/Data/UPpass", true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send("newpass="+newpass+"&oldpass="+oldpass);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+﻿@model List<Crtvu.Dal.tb_sc>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Schedule</title>
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
+    <style>
+        tr td {
+            vertical-align: middle !important;
+            width: 60px;
+            height: 60px;
+        }
+
+        .warning td[rowspan]:first-child {
+            background-color: #d9edf7;
+        }
+
+        .col-xs-full {
+            padding: 0;
+        }
+
+        .label-addition {
+            font-size: 22px;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td colspan="2"></td>
+                    <td>星期一</td>
+                    <td>星期二</td>
+                    <td>星期三</td>
+                    <td>星期四</td>
+                    <td>星期五</td>
+                    <td>星期六</td>
+                    <td>星期日</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tr>
+                <td rowspan="4">上午</td>
+                <td>第一节</td>
+                <td></td>
+                <td></td>
+                <td>大学英语</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="warning">
+                <td>第二节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>第三节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="warning">
+                <td>第四节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="4">下午</td>
+                <td>第一节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="warning">
+                <td>第二节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>第三节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="warning">
+                <td>第四节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="2">晚上</td>
+                <td>第一节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="warning">
+                <td>第二节</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+

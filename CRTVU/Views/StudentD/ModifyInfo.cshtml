@@ -1,0 +1,76 @@
+﻿@model Crtvu.Dal.tb_student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ModifyInfo</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("ModifyInfo", "StudentD", FormMethod.Post))
+        {
+            <table class="table table-striped">
+                <tr>
+                    <td>学号</td>
+                    <td>@Html.TextBoxFor(a => a.id, new { Readonly = "readonly" })</td>
+                </tr>
+                <tr>
+                    <td>姓名：</td>
+                    <td>@Html.TextBoxFor(a => a.name)</td>
+                </tr>
+                <tr>
+                    <td>籍贯：</td>
+                    <td>@Html.TextBoxFor(a => a.nplace)</td>
+                </tr>
+                <tr>
+                    <td>身份证号：</td>
+                    <td>@Html.TextBoxFor(a => a.id_card)</td>
+                </tr>
+                <tr>
+                    <td>性别</td>
+                    <td>@Html.TextBoxFor(a => a.sex)</td>
+                <tr>
+                    <td>联系方式：</td>
+                    <td>@Html.TextBoxFor(a => a.phone)</td>
+                </tr>
+                <tr>
+                    <td>学历：</td>
+                    <td>@Html.TextBoxFor(a => a.education)</td>
+                </tr>
+                <tr>
+                    <td>班级：</td>
+                    <td>@Html.TextBoxFor(a => a.stu_class, new { Readonly = "readonly" })</td>
+                </tr>
+                <tr>
+                    <td>系号：</td>
+                    <td>@Html.TextBoxFor(a => a.bid, new { Readonly = "readonly" })</td>
+                </tr>
+                <tr>
+                    <td>照片：</td>
+                    <td>@Html.TextBoxFor(a => a.image)</td>
+                </tr>
+                <tr>
+                    <td>系名称：</td>
+                    <td>@Html.TextBoxFor(a => a.bname, new { Readonly = "readonly" })</td>
+                </tr>
+                <tr>
+                    <td>其他：</td>
+                    <td>@Html.TextBoxFor(a => a.othertwo)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="确定" />
+                    </td>
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>
